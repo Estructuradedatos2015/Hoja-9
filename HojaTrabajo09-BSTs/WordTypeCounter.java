@@ -83,6 +83,7 @@ class WordTypeCounter {
 				
 				System.out.println("Palabras cargadas en " + (endtime-starttime) + " ms.");
 				
+				
 				// Procesar archivo de texto
 				starttime = System.currentTimeMillis();
 				line = textreader.readLine();

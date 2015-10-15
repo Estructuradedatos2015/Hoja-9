@@ -6,6 +6,8 @@ Autor: Eduardo Castellanos
 
 Descripción: WordSetFactory. Clase  utilizada para instanciar los diferentes tipos de sets. 
 */
+import structure5.SplayTree;
+
 class WordSetFactory {
 	
 	// Metodo que genera un objeto que implementa WordSet
@@ -19,14 +21,21 @@ class WordSetFactory {
 	{
 	    if (tipo == 1)
 		    return new SimpleSet();
-		else
+		else if(tipo==2)
+			return new RedBlackTreeSet();
+		else if(tipo==3)
+			return new SplayTreeSet();
+		else if(tipo==4)
+			return new HashMapSet();
+		else if(tipo==5)
+			return new TreeMapSet();
 		    // aqui se regresara el set empleando sus implementaciones:
 			// if tipo == 2 cree una instancia para un Wordset implementao con Red Black Tree
 			// if tipo == 3 cree una instancia para un Wordset implementado con Splay Tree
 			// if tipo == 4 cree una instancia para un Wordset implementado con Hash table
 			// if tipo == 5 cree una instancia para un Wordset implementado con TreeMap
-			
-			return new null; // modificarlo para que regrese la implementacion seleccionada
+		else
+			return new SplayTreeSet(); // modificarlo para que regrese la implementacion seleccionada
 	}
 	
 	
